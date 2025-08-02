@@ -5,12 +5,14 @@ from pathlib import Path
 from PIL import Image
 import numpy as np
 
-# Add yolov5 folder to path
-sys.path.append(str(Path(__file__).parent / 'yolov5'))
+# Force absolute path for yolov5 folder
+YOLOV5_PATH = Path(__file__).parent / 'yolov5'
+sys.path.insert(0, str(YOLOV5_PATH.resolve()))
 
 from models.experimental import attempt_load
 from utils.datasets import letterbox
 from utils.general import non_max_suppression, scale_coords
+
 
 @st.cache_resource
 def load_model():
