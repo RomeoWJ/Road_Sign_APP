@@ -1,7 +1,13 @@
 streamlit
 torch
+torchvision
 Pillow
 numpy
 opencv-python-headless
-torchvision
 pyyaml
+tqdm
+matplotlib
+seaborn
+scipy
+requests
+ultralytics
